@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cipher-studio"
+version = "1.0.0"
+description = "Classical cipher workbench: Caesar, Vigenere, Atbash, rail fence, substitution and XOR — with frequency analysis, index of coincidence, key-length estimation and working breaks. Zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["cryptanalysis", "vigenere", "caesar", "frequency-analysis", "education", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Education",
+]
+
+[project.scripts]
+cipher-studio = "cipherstudio.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cipherstudio*"]
